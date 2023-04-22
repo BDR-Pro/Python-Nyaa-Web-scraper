@@ -1,13 +1,15 @@
 import requests
 from bs4 import BeautifulSoup
-import pymongo 
+import pymongo
 from pymongo import MongoClient
 cluster = MongoClient("mongodb+srv://")        #cluster name
 db = cluster["NYAA"]    #database name
 collection = db["Anime"]    #collection name
-url="https://nyaa.si/?f=0&c=1_4&q=&p=1" #url of the page
-r = requests.get(url)
 num=1 # page counter 
+num = input("Enter the page number: ") #input the page number
+num = int(num)
+url = f"https://nyaa.si/?f=0&c=1_4&q=&p={num}" #url of the page
+r = requests.get(url)
 AnimeCheck = [] #array of titles
 urlView=[] #array of links
 
