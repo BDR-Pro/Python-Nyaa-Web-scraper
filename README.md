@@ -1,4 +1,8 @@
 # Nyaa-scraapper
+
+#A Part of Ananasa Project
+
+
 A simple python script to scrape nyaa.si for anime torrents
 functionality:
 - search for anime torrents
